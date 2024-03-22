@@ -9,11 +9,11 @@
 <body>
     <h1>Xenomorph Incremental Game</h1>
     <div id="resources">
-        <p>Biomass: <span id="biomnassCount">0</span></p>
+        <p>Biomass: <span id="biomassCount">0</span></p>
         <p>Biomass per second: <span id="biomassPerSecond">0</span></p>
     </div>
-    <button id="clickBiomass">Collect Biomass</button>
-    <button id="buyUpgrade">Buy Upgrade (Cost: 10 Biomass)</button>
+    <button onclick="clickBiomass()">Collect Biomass</button>
+    <button onclick="buyUpgrade()">Buy Upgrade (Cost: <span id="upgradeCost">10</span> Biomass)</button>
     
     <script src="game.js"></script>
 </body>

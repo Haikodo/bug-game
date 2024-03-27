@@ -2,7 +2,7 @@
 let biomassCount = 0;
 let biomassPerSecond = 0;
 let baseUpgradeCost = 10;
-let newUpgradeCost = 10;
+let newUpgradeCost = 0;
 let passiveBiomassCollecters = 0;
 let passiveBiomassCollection = 0;
 

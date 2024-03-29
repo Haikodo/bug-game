@@ -2,7 +2,7 @@
 let biomassCount = 0;
 let biomassPerSecond = 0;
 let baseUpgradeCost = 10;
-let newUpgradeCost = 0;
+let newUpgradeCost = baseUpgradeCost * (1.05 ^ passiveBiomassCollecters);
 let passiveBiomassCollecters = 0;
 let passiveBiomassCollection = 0;
 
@@ -24,7 +24,6 @@ function buyUpgrade() {
         biomassCount -= newUpgradeCost;
         biomassPerSecond++;
         passiveBiomassCollecters++;
-        newUpgradeCost = baseUpgradeCost*((1.05)^passiveBiomassCollecters);
         updateDisplay();
     }
 }

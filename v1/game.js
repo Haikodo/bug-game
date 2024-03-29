@@ -1,15 +1,15 @@
 
 let biomassCount = 0;
 let biomassPerSecond = 0;
-let baseUpgradeCost = 10;
-let newUpgradeCost = baseUpgradeCost * (1.05 ^ passiveBiomassCollecters);
-let passiveBiomassCollecters = 0;
+const baseUpgradeCost = 10;
+let passiveBiomassCollectors = 0;
 let passiveBiomassCollection = 0;
+let newUpgradeCost = 10
 
 function updateDisplay() {
-    document.getElementById("biomassCount").textContent = biomassCount;
+    document.getElementById("biomassCount").textContent = parseInt(biomassCount);
     document.getElementById("biomassPerSecond").textContent = biomassPerSecond;
-    document.getElementById("upgradeCost").textContent = newUpgradeCost;
+    document.getElementById("upgradeCost").textContent = parseInt(newUpgradeCost);
 }
 
 
@@ -23,7 +23,8 @@ function buyUpgrade() {
     if (biomassCount >= newUpgradeCost) {
         biomassCount -= newUpgradeCost;
         biomassPerSecond++;
-        passiveBiomassCollecters++;
+        passiveBiomassCollectors++;
+        newUpgradeCost = baseUpgradeCost * 1.05 ** passiveBiomassCollectors;
         updateDisplay();
     }
 }

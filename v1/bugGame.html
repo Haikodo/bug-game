@@ -7,7 +7,11 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    
     <h1>Xenomorph Incremental Game</h1>
+    <button id = save onclick="save()">save</button>
+    <button id = load onclick="load()">load</button>
+    <button id = restart onclick="restart()">Restart</button>
     <div id="resources">
         <p>Biomass: <span id="biomassCount">0</span></p>
         <p>Biomass per second: <span id="biomassPerSecond">0</span></p>
@@ -15,6 +19,7 @@
     <button onclick="clickBiomass()">Collect Biomass</button>
     <button onclick="buyUpgrade()">Buy Upgrade (Cost: <span id="upgradeCost">10</span> Biomass)</button>
     
+    <script src="player.js"></script>
     <script src="game.js"></script>
 </body>
 </html>

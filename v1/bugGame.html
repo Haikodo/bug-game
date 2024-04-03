@@ -7,19 +7,37 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
-    <h1>Xenomorph Incremental Game</h1>
-    <button id = save onclick="save()">save</button>
-    <button id = load onclick="load()">load</button>
-    <button id = restart onclick="reset()">Reset</button>
-    <div id="resources">
-        <p>Biomass: <span id="biomassCount">0</span></p>
-        <p>Biomass per second: <span id="biomassPerSecond">0</span></p>
+    <div class="tab">
+        <div class="tabLeft">
+            <button class="tabLinks" onclick="openTab(event, 'Player')" id="defaultOpen"><span id="playerName">Player</span></button>
+            <button class="tabLinks" onclick="openTab(event, 'Hive')">Hive</button>
+            <button class="tabLinks" onclick="openTab(event, 'World')">World</button>
+        </div>
+        <div class="tabRight">
+            <button id = save onclick="save()">Save</button>
+            <button id = load onclick="load()">Load</button>
+            <button id = restart onclick="reset()">Reset</button>
+        </div>
     </div>
-    <button onclick="clickBiomass()">Collect Biomass</button>
-    <button onclick="buyUpgrade()">Buy Upgrade (Cost: <span id="upgradeCost">10</span> Biomass)</button>
-    
+        <h1>Xenomorph Incremental Game</h1>
+    <div id="Player" class="tabContent">
+        <p>hi</p>
+    </div>
+
+    <div id="Hive" class="tabContent">
+        <div id="resources">
+            <p>Biomass: <span id="biomassCount">0</span></p>
+            <p>Biomass per second: <span id="biomassPerSecond">0</span></p>
+        </div>
+        <button onclick="clickBiomass()">Collect Biomass</button>
+        <button onclick="buyUpgrade()">Buy Upgrade (Cost: <span id="upgradeCost">10</span> Biomass)</button>
+    </div>
+
+    <div id="World" class="tabContent">
+
+    </div>
     <script src="player.js"></script>
     <script src="game.js"></script>
+    <script src="ui.js"></script>
 </body>
 </html>

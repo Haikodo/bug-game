@@ -28,6 +28,7 @@ function buyUpgrade() {
 
 function load() {
   var savedGame = JSON.parse(localStorage.getItem("gameSave"));
+  if (typeof savedGame.lastTab !== "undefined") lastTab = savedGame.lastTab;
   if (typeof savedGame.biomassCount !== "undefined") biomassCount = savedGame.biomassCount;
   if (typeof savedGame.biomassPerSecond !== "undefined") biomassPerSecond = savedGame.biomassPerSecond;
   if (typeof savedGame.passiveBiomassCollectors !== "undefined") passiveBiomassCollectors = savedGame.passiveBiomassCollectors;
@@ -36,6 +37,7 @@ function load() {
 
 function save() {
   var gameSave = {
+    lastTab: lastTab,
     biomassCount: biomassCount,
     biomassPerSecond: biomassPerSecond,
     passiveBiomassCollectors: passiveBiomassCollectors,

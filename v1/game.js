@@ -37,7 +37,6 @@ function load() {
 
 function save() {
   var gameSave = {
-    lastTab: lastTab,
     biomassCount: biomassCount,
     biomassPerSecond: biomassPerSecond,
     passiveBiomassCollectors: passiveBiomassCollectors,
@@ -73,6 +72,6 @@ document.getElementById("clickBiomass").addEventListener("click", clickBiomass);
 document.getElementById("buyUpgrade").addEventListener("click", buyUpgrade);
 document.getElementById("save").addEventListener("click", save);
 document.getElementById("load").addEventListener("click", load);
-document.getElementById("restart").addEventListener("click", restart);
+document.getElementById("restart").addEventListener("click", reset);
 
 updateDisplay();

@@ -25,12 +25,26 @@
     </div>
 
     <div id="Hive" class="tabContent">
-        <div id="resources">
-            <p>Biomass: <span id="biomassCount">0</span></p>
-            <p>Biomass per second: <span id="biomassPerSecond">0</span></p>
+        <div class="row">
+            <div id="resources">
+            
+                <p>Biomass: <span id="biomassCount">0</span></p>
+                <p>Biomass per second: <span id="biomassPerSecond">0</span></p>
+            </div>
+            <div>
+                <div class="sep">
+                    <button onclick="clickBiomass()">Collect Biomass</button>
+                </div>
+                <div class="sep">
+                    <button onclick="buyUpgrade()">Buy Upgrade (Cost: <span id="upgradeCost">10</span> Biomass)</button>
+                </div>
+                <div class="sepend">
+                    <button></button>
+                </div>
+            </div>
+            <div></div>
         </div>
-        <button onclick="clickBiomass()">Collect Biomass</button>
-        <button onclick="buyUpgrade()">Buy Upgrade (Cost: <span id="upgradeCost">10</span> Biomass)</button>
+
     </div>
 
     <div id="World" class="tabContent">

@@ -5,7 +5,7 @@ body {
     text-align: center;
     font-family: Arial, sans-serif;
     background-color: #1a1e36;
-    /*background-image: url("lesbianhex.png");*/
+    background-image: url("lesbianhex.png");
     background-repeat: repeat;
 }
 
@@ -17,11 +17,12 @@ h1 {
 .tab {
     overflow: hidden;
     background-color: #000000;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 } 
   /* Style the buttons that are used to open the tab content */
 .tab button {
     background-color: inherit;
-    float: left;
     border: none;
     outline: none;
     cursor: pointer;
@@ -36,12 +37,23 @@ h1 {
     background-color: #320203;
 }  
 
+.tabLeft {
+    display: flex;
+    float: left;
+}
+
+.tabRight {
+    display: flex;
+    float: right;
+}
+
   /* Style the tab content */
 .tabContent {
     display: none;
     padding: 6px 12px;
     border-top: none;
 }
+
 button {
     background-color: #320203;
     color: #cf3a54;
@@ -51,12 +63,31 @@ button {
     cursor: pointer;
 }
 
-#resources {
-    margin-top: 10px;
-    margin-left: 40%;
-    margin-right: 40%;
+.row {
+    display: grid;
+    grid-template-columns: 1.2fr 4fr 2fr;
     color: #53cf2e;
-    padding: 10px;
     border: 5px solid black;
     text-align: left;
+    background-color: #1a1e36;
+}
+
+.row > div:first-child {
+    border-right: 5px solid black;
+}
+
+.row > div:last-child {
+    border-left: 5px solid black;
+}
+
+#resources {
+    margin-left: 10px;
+}
+
+#resources > p:first-child {
+    margin: 10px 0px 0px 0px;
+}
+
+#resources > p {
+    margin: 2.5px 0px 0px 0px;
 }

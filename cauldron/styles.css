@@ -1,0 +1,56 @@
+body {
+    margin: 0px;
+}
+
+#game {
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    border: 5px solid grey;
+}
+
+.top {
+    display: flex;
+    width: 100%;
+    height: 10vh;
+    box-sizing: inherit;
+    border-bottom: 5px solid grey;
+}
+
+.mid {
+    display: flex;
+    width: 100%;
+    height: 70vh;
+    box-sizing: inherit;
+    border-bottom: 5px solid grey;
+}
+
+#resource {
+    width: 100vw;
+    border-top: 5px solid grey;
+}
+
+#tabs {
+    width: 70px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    border-right: 5px solid grey;
+}
+
+#actions {
+    display: flex;
+    width: 100%;
+
+    justify-content: space-evenly;
+}
+
+#actions > button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 10%;
+    max-height: 50px;
+}

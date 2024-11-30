@@ -13,6 +13,6 @@ function openTab(evt, tabName) {
 
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
+    
 }
-
-window.onload = document.getElementById("defaultOpen").click()
+window.onload = document.getElementById("defaultOpen").click();

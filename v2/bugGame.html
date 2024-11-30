@@ -9,23 +9,19 @@
 <body>
     <div class="tab">
         <div class="tabLeft">
-            <button class="tabLinks" onclick="openTab(event, 'Player')"><span id="enteredPlayerName">Player</span></button>
+            <button class="tabLinks" onclick="openTab(event, 'Player')"><span id="playerName">Player</span></button>
             <button class="tabLinks" onclick="openTab(event, 'Hive')" id="defaultOpen">Hive</button>
             <button class="tabLinks" onclick="openTab(event, 'World')">World</button>
         </div>
         <div class="tabRight">
-            <button id = save onclick="save()">Save</button>
-            <button id = load onclick="load()">Load</button>
-            <button id = restart onclick="reset()">Reset</button>
+            <button id = save >Save</button>
+            <button id = load >Load</button>
+            <button id = restart >Reset</button>
         </div>
     </div>
         <h1>Xenomorph Incremental Game</h1>
     <div id="Player" class="tabContent">
-        <p>You, who whose birth is celebrated in a burst of viscera from your hosts' chest.</p>
-        <p>What is your identity?</p>
-        <form action="" id="playerNameForm">
-            <input type="text" id="playerName"><input type="submit">
-        </form>
+        <p>hi</p>
     </div>
 
     <div id="Hive" class="tabContent">
@@ -33,16 +29,17 @@
             <div id="resources">
             
                 <p>Biomass: <span id="biomassCount">0</span></p>
-                <p>Biomass per second: <span id="biomassPerSecond">0.0</span></p>
+                <p>Biomass per second: <span id="biomassPerSecond">0</span></p>
+                <p></p>
             </div>
             <div>
-                <div class="sep">
-                    <button onclick="clickBiomass()">Collect Biomass</button>
+                <div>
+                    <button >Collect Biomass</button>
                 </div>
-                <div class="sep">
-                    <button onclick="buyUpgrade()">Buy Upgrade (Cost: <span id="upgradeCost">10</span> Biomass)</button>
+                <div>
+                    <button >Buy Upgrade (Cost: <span id="upgradeCost">10</span> Biomass)</button>
                 </div>
-                <div class="sepend">
+                <div>
                     <button></button>
                 </div>
             </div>
@@ -54,8 +51,7 @@
     <div id="World" class="tabContent">
 
     </div>
-    <script src="player.js"></script>
+    <script src="uiHandler.js"></script>
     <script src="game.js"></script>
-    <script src="ui.js"></script>
 </body>
 </html>

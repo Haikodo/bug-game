@@ -4,10 +4,13 @@ const baseUpgradeCost = 10;
 let passiveBiomassCollectors = 0;
 let passiveBiomassCollection = 0;
 let newUpgradeCost = 10;
+let facehuggerCount = 0;
+let hostsCount = 0;
+let xenomorphCount = 0;
 
 function updateDisplay() {
   document.getElementById("biomassCount").textContent = parseInt(biomassCount);
-  document.getElementById("biomassPerSecond").textContent =parseInt(biomassPerSecond);
+  document.getElementById("biomassPerSecond").textContent = biomassPerSecond.toFixed(1);
   document.getElementById("upgradeCost").textContent = parseInt(newUpgradeCost);
   newUpgradeCost = baseUpgradeCost * 1.05 ** passiveBiomassCollectors
 };
@@ -20,15 +23,14 @@ function clickBiomass() {
 function buyUpgrade() {
   if (biomassCount >= newUpgradeCost) {
     biomassCount -= newUpgradeCost;
-    biomassPerSecond++;
+    biomassPerSecond += 0.1;
     passiveBiomassCollectors++;
     updateDisplay();
   }
 };
 
 function load() {
-  var savedGame = JSON.parse(localStorage.getItem("gameSave"));
-  if (typeof savedGame.lastTab !== "undefined") lastTab = savedGame.lastTab;
+  savedGame = JSON.parse(localStorage.getItem("gameSave"));
   if (typeof savedGame.biomassCount !== "undefined") biomassCount = savedGame.biomassCount;
   if (typeof savedGame.biomassPerSecond !== "undefined") biomassPerSecond = savedGame.biomassPerSecond;
   if (typeof savedGame.passiveBiomassCollectors !== "undefined") passiveBiomassCollectors = savedGame.passiveBiomassCollectors;
@@ -36,7 +38,7 @@ function load() {
 };
 
 function save() {
-  var gameSave = {
+  gameSave = {
     biomassCount: biomassCount,
     biomassPerSecond: biomassPerSecond,
     passiveBiomassCollectors: passiveBiomassCollectors,
@@ -51,14 +53,6 @@ function reset() {
   updateDisplay();
 };
 
-window.onload = function() {
-  load();
-  updateDisplay();
-  document.getElementById("biomassCount").textContent = parseInt(biomassCount);
-  document.getElementById("biomassPerSecond").textContent = parseInt(biomassPerSecond);
-  document.getElementById("upgradeCost").textContent = parseInt(newUpgradeCost);
-}
-
 setInterval(() => {
   biomassCount += biomassPerSecond;
   updateDisplay();
@@ -67,6 +61,14 @@ setInterval(() => {
 setInterval(() => {
   save();
 }, 30000);
+
+window.onload = function () {
+  load();
+  updateDisplay();
+  document.getElementById("biomassCount").textContent = parseInt(biomassCount);
+  document.getElementById("biomassPerSecond").textContent = parseInt(biomassPerSecond);
+  document.getElementById("upgradeCost").textContent = parseInt(newUpgradeCost);
+};
 
 document.getElementById("clickBiomass").addEventListener("click", clickBiomass);
 document.getElementById("buyUpgrade").addEventListener("click", buyUpgrade);

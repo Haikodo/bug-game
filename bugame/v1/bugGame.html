@@ -9,7 +9,7 @@
 <body>
     <div class="tab">
         <div class="tabLeft">
-            <button class="tabLinks" onclick="openTab(event, 'Player')" id="defaultOpen"><span id="enteredPlayerName">Player</span></button>
+            <button class="tabLinks" onclick="openTab(event, 'Player')" id="defaultOpen"><span id="playerName">Player</span></button>
             <button class="tabLinks" onclick="openTab(event, 'Hive')">Hive</button>
             <button class="tabLinks" onclick="openTab(event, 'World')">World</button>
         </div>
@@ -21,14 +21,7 @@
     </div>
         <h1>Xenomorph Incremental Game</h1>
     <div id="Player" class="tabContent">
-        <div id="lore">
-        </div>
-        <form id="playerForm">
-            <p>You, who whose birth is celebrated in a burst of viscera from your hosts' chest.</p>
-        <p>What is your identity?</p>
-            <input type="text" id="playerName" name="submittedName" required>
-            <input type="submit">
-        </form>
+        <p>hi</p>
     </div>
 
     <div id="Hive" class="tabContent">
@@ -36,7 +29,7 @@
             <div id="resources">
             
                 <p>Biomass: <span id="biomassCount">0</span></p>
-                <p>Biomass per second: <span id="biomassPerSecond">0.0</span></p>
+                <p>Biomass per second: <span id="biomassPerSecond">0</span></p>
             </div>
             <div>
                 <div class="sep">

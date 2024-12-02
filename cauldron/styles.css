@@ -1,3 +1,7 @@
+:root {
+    --border: black
+}
+
 body {
     margin: 0px;
 }
@@ -6,28 +10,32 @@ body {
     width: 100vw;
     height: 100vh;
     box-sizing: border-box;
-    border: 5px solid grey;
+    border: 5px solid var(--border);
+    background-color: rgb(23, 23, 50);
+    color: white;
 }
 
 .top {
     display: flex;
     width: 100%;
-    height: 10vh;
+    height: 20vh;
     box-sizing: inherit;
-    border-bottom: 5px solid grey;
+    border-bottom: 5px solid var(--border);
+    align-items: flex-end;
 }
 
 .mid {
     display: flex;
     width: 100%;
-    height: 70vh;
+    height: 45vh;
     box-sizing: inherit;
-    border-bottom: 5px solid grey;
+    border-bottom: 5px solid var(--border);
 }
 
 #resource {
+    height: 20px;
     width: 100vw;
-    border-top: 5px solid grey;
+    border-top: 5px solid var(--border);
 }
 
 #tabs {
@@ -36,13 +44,12 @@ body {
     display: flex;
     flex-direction: column;
     align-content: center;
-    border-right: 5px solid grey;
+    border-right: 5px solid var(--border);
 }
 
 #actions {
     display: flex;
     width: 100%;
-
     justify-content: space-evenly;
 }
 
@@ -53,4 +60,11 @@ body {
     flex-wrap: wrap;
     max-width: 10%;
     max-height: 50px;
+    background-color: rgb(38, 38, 81);
+    color: white;
+}
+
+button {
+    background-color: aqua;
+    color: white;
 }

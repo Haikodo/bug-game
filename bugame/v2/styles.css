@@ -1,0 +1,12 @@
+:root {
+    --textColor: #53cf2e;
+    --buttonTextColor: #cf3a54;
+    --buttonBackgroundColor: #320203;
+    --contentBackgroundColor: #1a1e36;
+    --borderColor: black;
+}
+
+#topbar {
+    display: flex;
+    align-items: center;
+}

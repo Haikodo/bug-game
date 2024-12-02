@@ -1,17 +1,16 @@
-debugger
+const name = document.getElementById("enteredPlayerName");
+const playerForm = document.getElementById("playerForm");
 
-let playerNameForm = document.getElementById("playerNameForm")
+// Name Changer
+playerForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+    const playerName = document.getElementById("playerName").value;
 
-playerNameForm.addEventListener("submit", (e) => {
-    e.preventDefault();
+    const submittedName = String(playerName);
 
-    let enteredPlayerName = document.getElementById("playerName");
+    name.innerHTML = submittedName;
 
-    if (enteredPlayerName.value == "") {
-        alert("you done fucked up")
-    } else {
-        document.getElementById("enteredPlayerName").innerHTML = enteredPlayerName
-        alert("yippee")
-        console.log(enteredPlayerName)
-    }
+    playerForm.style.display = "none";
+
+    loreScroll();
 });

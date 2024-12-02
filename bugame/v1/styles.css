@@ -1,0 +1,93 @@
+:root {
+    color:#53cf2e ;
+}
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #1a1e36;
+    background-image: url("lesbianhex.png");
+    background-repeat: repeat;
+}
+
+h1 {
+    color: #53cf2e;
+}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    background-color: #000000;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+} 
+  /* Style the buttons that are used to open the tab content */
+.tab button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+}  
+  /* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #320203;
+}  
+  /* Create an active/current tablink class */
+.tab button.active {
+    background-color: #320203;
+}  
+
+.tabLeft {
+    display: flex;
+    float: left;
+}
+
+.tabRight {
+    display: flex;
+    float: right;
+}
+
+  /* Style the tab content */
+.tabContent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+}
+
+button {
+    background-color: #320203;
+    color: #cf3a54;
+    padding: 10px 20px;
+    border: none;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1.2fr 4fr 2fr;
+    color: #53cf2e;
+    border: 5px solid black;
+    text-align: left;
+    background-color: #1a1e36;
+}
+
+.row > div:first-child {
+    border-right: 5px solid black;
+}
+
+.row > div:last-child {
+    border-left: 5px solid black;
+}
+
+#resources {
+    margin-left: 10px;
+}
+
+#resources > p:first-child {
+    margin: 10px 0px 0px 0px;
+}
+
+#resources > p {
+    margin: 2.5px 0px 0px 0px;
+}

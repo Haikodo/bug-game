@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xenomorph Incremental Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- The top bar -->
+    <div class="tab">
+
+        <!-- Left side -->
+        <div class="tabLeft">
+
+            <!-- All the important tabs for each different style of the game-->
+
+            <!-- This one is set as defaultOpen so it is the first thing the player sees.
+             An RPG-like style
+             The span is to allow the player to set the [Player] string of the tab to a custom name-->
+            <button class="tabLinks" onclick="openTab(event, 'Player')" id="defaultOpen">
+                <span id="enteredPlayerName">Player</span>
+            </button>
+
+            <!-- Tab related to more incremental style-->
+            <button class="tabLinks" onclick="openTab(event, 'Hive')">Hive</button>
+
+            <!-- Tab related to the surrounding world
+             Still have to determine how to set this up -->
+            <button class="tabLinks" onclick="openTab(event, 'World')">World</button>
+        </div>
+
+        <!-- Right side -->
+         <!-- Could compress into a single 'Settings' div and add more options-->
+        <div class="tabRight">
+            <button id = save onclick="save()">Save</button>
+            <button id = load onclick="load()">Load</button>
+            <button id = restart onclick="reset()">Reset</button>
+        </div>
+    </div>
+
+    <!-- The Title!!!
+     "He said the thing!" -->
+        <h1>Xenomorph Incremental Game</h1>
+
+    <!-- This is all the elements related to all the content within the tabs -->
+
+    <!-- RPG=like elements-->
+    <div id="Player" class="tabContent">
+        <div id="lore">
+        </div>
+        <form id="playerForm">
+            <p>You, who whose birth is celebrated in a burst of viscera from your hosts' chest.</p>
+        <p>What is your identity?</p>
+            <input type="text" id="playerName" name="submittedName" required>
+            <input type="submit">
+        </form>
+    </div>
+
+    <!-- Incremental/Idle type elements-->
+    <div id="Hive" class="tabContent">
+        <div class="row">
+            <div id="resources">
+            
+                <p>Biomass: <span id="biomassCount">0</span></p>
+                <p>Biomass per second: <span id="biomassPerSecond">0.0</span></p>
+            </div>
+            <div>
+                <div class="sep">
+                    <button onclick="clickBiomass()">Collect Biomass</button>
+                </div>
+                <div class="sep">
+                    <button onclick="buyUpgrade()">Buy Upgrade (Cost: <span id="upgradeCost">10</span> Biomass)</button>
+                </div>
+                <div class="sepend">
+                    <button></button>
+                </div>
+            </div>
+            <div></div>
+        </div>
+
+    </div>
+
+    <!-- TBD type elements-->
+    <div id="World" class="tabContent">
+
+    </div>
+
+    <!--This is the big boi file-->
+    <script type="module" src="scripts/main.js"></script>
+</body>
+</html>

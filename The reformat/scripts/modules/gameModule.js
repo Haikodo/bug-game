@@ -1,0 +1,1 @@
+// Handles game mechanics (biomass, upgrades, etc.)

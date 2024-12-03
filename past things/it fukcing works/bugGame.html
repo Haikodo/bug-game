@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xenomorph Incremental Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="tab">
+        <div class="tabLeft">
+            <button class="tabLinks" onclick="openTab(event, 'Player')" id="defaultOpen"><span id="enteredPlayerName">Player</span></button>
+            <button class="tabLinks" onclick="openTab(event, 'Hive')">Hive</button>
+            <button class="tabLinks" onclick="openTab(event, 'World')">World</button>
+        </div>
+        <div class="tabRight">
+            <button id = save onclick="save()">Save</button>
+            <button id = load onclick="load()">Load</button>
+            <button id = restart onclick="reset()">Reset</button>
+        </div>
+    </div>
+        <h1>Xenomorph Incremental Game</h1>
+    <div id="Player" class="tabContent">
+        <div id="lore">
+        </div>
+        <form id="playerForm">
+            <p>You, who whose birth is celebrated in a burst of viscera from your hosts' chest.</p>
+        <p>What is your identity?</p>
+            <input type="text" id="playerName" name="submittedName" required>
+            <input type="submit">
+        </form>
+    </div>
+
+    <div id="Hive" class="tabContent">
+        <div class="row">
+            <div id="resources">
+            
+                <p>Biomass: <span id="biomassCount">0</span></p>
+                <p>Biomass per second: <span id="biomassPerSecond">0.0</span></p>
+            </div>
+            <div>
+                <div class="sep">
+                    <button onclick="clickBiomass()">Collect Biomass</button>
+                </div>
+                <div class="sep">
+                    <button onclick="buyUpgrade()">Buy Upgrade (Cost: <span id="upgradeCost">10</span> Biomass)</button>
+                </div>
+                <div class="sepend">
+                    <button></button>
+                </div>
+            </div>
+            <div></div>
+        </div>
+
+    </div>
+
+    <div id="World" class="tabContent">
+
+    </div>
+    <script type="module" src="scripts/big boi files.js"></script>
+    <script src="scripts/bigboifile.js"></script>
+    <script src="player.js"></script>
+    <script src="game.js"></script>
+    <script src="ui.js"></script>
+</body>
+</html>
